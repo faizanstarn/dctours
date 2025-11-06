@@ -10,9 +10,7 @@
     <title>DC Nation Tours & Travel | Premier Washington DC Tours & Transportation</title>
     <meta name="description" content="Experience Washington DC with DC Nation's premier tours & transportation services. Guided day tours, LED night tours, walking tours & airport transportation.">
     
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    
+    <!-- Color Scheme -->
     <style>
         :root {
             --primary: #1a237e;
@@ -20,24 +18,19 @@
             --accent: #4caf50;
             --light: #f5f5f5;
             --dark: #212121;
-            --gradient-start: #1a237e;
-            --gradient-end: #283593;
-            --gradient-secondary-start: #ff6f00;
-            --gradient-secondary-end: #ff8f00;
         }
         
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
         body {
-            font-family: 'Open Sans', sans-serif;
             background-color: var(--light);
             color: var(--dark);
             line-height: 1.6;
-            overflow-x: hidden;
         }
         
         .container {
@@ -47,34 +40,14 @@
         }
         
         header {
-            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            background: linear-gradient(135deg, var(--primary), #283593);
             color: white;
             padding: 2rem 0;
             text-align: center;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .logo-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0.1;
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="100" viewBox="0 0 200 100"><text x="20" y="50" font-family="Arial" font-size="24" fill="white">DE NATION</text><text x="20" y="75" font-family="Arial" font-size="14" fill="white">Tours and Travel</text></svg>');
-            background-repeat: repeat;
-            z-index: 0;
-        }
-        
-        .header-content {
-            position: relative;
-            z-index: 1;
         }
         
         h1 {
-            font-family: 'Montserrat', sans-serif;
             font-size: 2.8rem;
             margin-bottom: 0.5rem;
             text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
@@ -87,12 +60,8 @@
         }
         
         nav {
-            background: linear-gradient(135deg, var(--gradient-secondary-start), var(--gradient-secondary-end));
+            background-color: var(--secondary);
             padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
         
         nav ul {
@@ -112,30 +81,15 @@
             font-weight: 600;
             font-size: 1.1rem;
             transition: all 0.3s ease;
-            padding: 5px 10px;
-            border-radius: 4px;
         }
         
         nav a:hover {
-            background-color: rgba(255,255,255,0.2);
-            text-decoration: none;
+            color: var(--light);
+            text-decoration: underline;
         }
         
         section {
             padding: 4rem 0;
-            position: relative;
-        }
-        
-        .section-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0.03;
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="100" viewBox="0 0 200 100"><text x="20" y="50" font-family="Arial" font-size="24" fill="%231a237e">DE NATION</text><text x="20" y="75" font-family="Arial" font-size="14" fill="%231a237e">Tours and Travel</text></svg>');
-            background-repeat: repeat;
-            z-index: -1;
         }
         
         .section-title {
@@ -144,7 +98,6 @@
             margin-bottom: 3rem;
             font-size: 2.2rem;
             position: relative;
-            font-family: 'Montserrat', sans-serif;
         }
         
         .section-title:after {
@@ -152,9 +105,8 @@
             display: block;
             width: 80px;
             height: 4px;
-            background: linear-gradient(to right, var(--gradient-secondary-start), var(--gradient-secondary-end));
+            background-color: var(--secondary);
             margin: 10px auto;
-            border-radius: 2px;
         }
         
         .tour-card {
@@ -163,13 +115,11 @@
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             margin-bottom: 2rem;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
+            transition: transform 0.3s ease;
         }
         
         .tour-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
         }
         
         .tour-content {
@@ -180,7 +130,6 @@
             color: var(--primary);
             margin-bottom: 1rem;
             font-size: 1.5rem;
-            font-family: 'Montserrat', sans-serif;
         }
         
         .tour-description {
@@ -189,48 +138,29 @@
         
         .btn {
             display: inline-block;
-            background: linear-gradient(135deg, var(--gradient-secondary-start), var(--gradient-secondary-end));
+            background-color: var(--secondary);
             color: white;
             padding: 10px 20px;
             border-radius: 5px;
             text-decoration: none;
             font-weight: 600;
             transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            font-family: 'Montserrat', sans-serif;
         }
         
         .btn:hover {
+            background-color: #e65100;
             transform: scale(1.05);
-            box-shadow: 0 5px 15px rgba(255,111,0,0.3);
         }
         
         .contact-info {
-            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            background-color: var(--primary);
             color: white;
             padding: 3rem 0;
             text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .contact-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0.1;
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="100" viewBox="0 0 200 100"><text x="20" y="50" font-family="Arial" font-size="24" fill="white">DE NATION</text><text x="20" y="75" font-family="Arial" font-size="14" fill="white">Tours and Travel</text></svg>');
-            background-repeat: repeat;
-            z-index: 0;
         }
         
         .contact-info h2 {
             margin-bottom: 2rem;
-            position: relative;
-            z-index: 1;
         }
         
         .contact-details {
@@ -239,8 +169,6 @@
             flex-wrap: wrap;
             gap: 2rem;
             margin-bottom: 2rem;
-            position: relative;
-            z-index: 1;
         }
         
         .contact-item {
@@ -254,8 +182,6 @@
             justify-content: center;
             gap: 1rem;
             margin-top: 1.5rem;
-            position: relative;
-            z-index: 1;
         }
         
         .social-icon {
@@ -274,7 +200,7 @@
         }
         
         .social-icon:hover {
-            background: linear-gradient(135deg, var(--gradient-secondary-start), var(--gradient-secondary-end));
+            background-color: var(--secondary);
             color: white;
             transform: scale(1.1);
         }
@@ -299,18 +225,12 @@
             .section-title {
                 font-size: 1.8rem;
             }
-            
-            .contact-details {
-                flex-direction: column;
-                gap: 1rem;
-            }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="logo-background"></div>
-        <div class="container header-content">
+        <div class="container">
             <h1>DC Nation Tours & Travel</h1>
             <p class="tagline">Experience the Heart of America Like Never Before</p>
         </div>
@@ -330,7 +250,6 @@
     </nav>
     
     <section id="about">
-        <div class="section-bg"></div>
         <div class="container">
             <h2 class="section-title">Discover Washington DC With The Experts</h2>
             <p>Welcome to DC Nation Tours & Travel, your premier guide to experiencing the nation's capital. We offer immersive, educational, and unforgettable tours that showcase the rich history, vibrant culture, and iconic landmarks of Washington DC. Whether you're a first-time visitor or a seasoned traveler, our expertly crafted tours provide unique perspectives and memorable experiences.</p>
@@ -338,7 +257,6 @@
     </section>
     
     <section id="day-tours">
-        <div class="section-bg"></div>
         <div class="container">
             <h2 class="section-title">Best Day Tours in Washington DC</h2>
             
@@ -361,7 +279,6 @@
     </section>
     
     <section id="night-tours">
-        <div class="section-bg"></div>
         <div class="container">
             <h2 class="section-title">Guided LED Night Tours</h2>
             
@@ -377,7 +294,6 @@
     </section>
     
     <section id="walking-tours">
-        <div class="section-bg"></div>
         <div class="container">
             <h2 class="section-title">Immersive Walking Tours</h2>
             
@@ -398,7 +314,6 @@
     </section>
     
     <section id="transportation">
-        <div class="section-bg"></div>
         <div class="container">
             <h2 class="section-title">Premium Airport Transportation Services</h2>
             
@@ -414,7 +329,6 @@
     </section>
     
     <section id="contact" class="contact-info">
-        <div class="contact-bg"></div>
         <div class="container">
             <h2>Contact DC Nation Tours & Travel</h2>
             
