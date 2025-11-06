@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="google-site-verification" content="34vLA3nL-zdeb_elZd8UeeV8zWT-0VkKq1CjmSJ0edc" />
+    
+    <!-- SEO Meta Tags -->
+    <title>DC Nation Tours & Travel | Premier Washington DC Tours & Transportation</title>
+    <meta name="description" content="Experience Washington DC with DC Nation's premier tours & transportation services. Guided day tours, LED night tours, walking tours & airport transportation.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #1a237e;
+            --secondary: #ff6f00;
+            --accent: #4caf50;
+            --light: #f5f5f5;
+            --dark: #212121;
+            --gradient-start: #1a237e;
+            --gradient-end: #283593;
+            --gradient-secondary-start: #ff6f00;
+            --gradient-secondary-end: #ff8f00;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .logo-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.1;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="100" viewBox="0 0 200 100"><text x="20" y="50" font-family="Arial" font-size="24" fill="white">DE NATION</text><text x="20" y="75" font-family="Arial" font-size="14" fill="white">Tours and Travel</text></svg>');
+            background-repeat: repeat;
+            z-index: 0;
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+        }
+        
+        nav {
+            background: linear-gradient(135deg, var(--gradient-secondary-start), var(--gradient-secondary-end));
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        
+        nav li {
+            margin: 0 15px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        
+        nav a:hover {
+            background-color: rgba(255,255,255,0.2);
+            text-decoration: none;
+        }
+        
+        section {
+            padding: 4rem 0;
+            position: relative;
+        }
+        
+        .section-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.03;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="100" viewBox="0 0 200 100"><text x="20" y="50" font-family="Arial" font-size="24" fill="%231a237e">DE NATION</text><text x="20" y="75" font-family="Arial" font-size="14" fill="%231a237e">Tours and Travel</text></svg>');
+            background-repeat: repeat;
+            z-index: -1;
+        }
+        
+        .section-title {
+            text-align: center;
+            color: var(--primary);
+            margin-bottom: 3rem;
+            font-size: 2.2rem;
+            position: relative;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, var(--gradient-secondary-start), var(--gradient-secondary-end));
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+        
+        .tour-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+        
+        .tour-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .tour-content {
+            padding: 1.5rem;
+        }
+        
+        .tour-title {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .tour-description {
+            margin-bottom: 1.5rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--gradient-secondary-start), var(--gradient-secondary-end));
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(255,111,0,0.3);
+        }
+        
+        .contact-info {
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.1;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="100" viewBox="0 0 200 100"><text x="20" y="50" font-family="Arial" font-size="24" fill="white">DE NATION</text><text x="20" y="75" font-family="Arial" font-size="14" fill="white">Tours and Travel</text></svg>');
+            background-repeat: repeat;
+            z-index: 0;
+        }
+        
+        .contact-info h2 {
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .contact-details {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .social-icon {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            background: linear-gradient(135deg, var(--gradient-secondary-start), var(--gradient-secondary-end));
+            color: white;
+            transform: scale(1.1);
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .contact-details {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-background"></div>
+        <div class="container header-content">
+            <h1>DC Nation Tours & Travel</h1>
+            <p class="tagline">Experience the Heart of America Like Never Before</p>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="https://dcnationtours.com/">Home</a></li>
+                <li><a href="https://dcnationtours.com/tours/guided-day-tours-washington-dc/">Day Tours</a></li>
+                <li><a href="https://dcnationtours.com/tours/washington-dc-night-tours/">Night Tours</a></li>
+                <li><a href="#walking-tours">Walking Tours</a></li>
+                <li><a href="https://dcnationtours.com/airport-transportation-service/">Airport Transport</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <section id="about">
+        <div class="section-bg"></div>
+        <div class="container">
+            <h2 class="section-title">Discover Washington DC With The Experts</h2>
+            <p>Welcome to DC Nation Tours & Travel, your premier guide to experiencing the nation's capital. We offer immersive, educational, and unforgettable tours that showcase the rich history, vibrant culture, and iconic landmarks of Washington DC. Whether you're a first-time visitor or a seasoned traveler, our expertly crafted tours provide unique perspectives and memorable experiences.</p>
+        </div>
+    </section>
+    
+    <section id="day-tours">
+        <div class="section-bg"></div>
+        <div class="container">
+            <h2 class="section-title">Best Day Tours in Washington DC</h2>
+            
+            <div class="tour-card">
+                <div class="tour-content">
+                    <h3 class="tour-title">Monuments & Memorials Tour</h3>
+                    <p class="tour-description">Experience the iconic landmarks that define American history on our comprehensive monuments tour. Visit the Lincoln Memorial, Washington Monument, WWII Memorial, Vietnam Veterans Memorial, and more. Our knowledgeable guides provide fascinating historical context and insider stories that bring these sacred sites to life.</p>
+                    <a href="https://dcnationtours.com/tours/guided-day-tours-washington-dc/" class="btn">Book Day Tour</a>
+                </div>
+            </div>
+            
+            <div class="tour-card">
+                <div class="tour-content">
+                    <h3 class="tour-title">Capitol Hill & Museum Experience</h3>
+                    <p class="tour-description">Delve into the heart of American democracy with our Capitol Hill tour. Explore the U.S. Capitol Building, Library of Congress, and Supreme Court. Then, immerse yourself in world-class museums along the National Mall, including the Smithsonian museums that house treasures from around the globe.</p>
+                    <a href="https://dcnationtours.com/tours/guided-day-tours-washington-dc/" class="btn">Book Day Tour</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="night-tours">
+        <div class="section-bg"></div>
+        <div class="container">
+            <h2 class="section-title">Guided LED Night Tours</h2>
+            
+            <div class="tour-card">
+                <div class="tour-content">
+                    <h3 class="tour-title">DC After Dark: Illuminated Monuments Tour</h3>
+                    <p class="tour-description">Witness Washington DC transform into a magical landscape of light and shadow on our spectacular LED night tours. As dusk falls, the city's monuments and memorials take on a breathtaking new dimension. Our comfortable, climate-controlled vehicles provide the perfect vantage point to capture stunning photos of illuminated landmarks against the night sky.</p>
+                    <p class="tour-description">This unforgettable experience includes visits to the brilliantly lit Lincoln Memorial, Jefferson Memorial, Martin Luther King Jr. Memorial, and more. Our expert guides share captivating stories and historical insights as you enjoy the capital's most photogenic views.</p>
+                    <a href="https://dcnationtours.com/tours/washington-dc-night-tours/" class="btn">Book Night Tour</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="walking-tours">
+        <div class="section-bg"></div>
+        <div class="container">
+            <h2 class="section-title">Immersive Walking Tours</h2>
+            
+            <div class="tour-card">
+                <div class="tour-content">
+                    <h3 class="tour-title">Historic Georgetown Stroll</h3>
+                    <p class="tour-description">Step back in time as you explore one of Washington's most charming and historic neighborhoods. Our Georgetown walking tour takes you along cobblestone streets past beautifully preserved 18th and 19th-century homes, the C&O Canal, and the prestigious Georgetown University campus. Discover the stories of famous residents and pivotal moments in American history that unfolded in this picturesque setting.</p>
+                </div>
+            </div>
+            
+            <div class="tour-card">
+                <div class="tour-content">
+                    <h3 class="tour-title">National Mall Landmarks Walk</h3>
+                    <p class="tour-description">Experience the grandeur of America's front yard up close on our National Mall walking tour. Covering two miles from the U.S. Capitol to the Lincoln Memorial, this immersive journey allows you to appreciate the scale and significance of these iconic monuments while learning the fascinating stories behind their creation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="transportation">
+        <div class="section-bg"></div>
+        <div class="container">
+            <h2 class="section-title">Premium Airport Transportation Services</h2>
+            
+            <div class="tour-card">
+                <div class="tour-content">
+                    <h3 class="tour-title">Seamless Airport Transfers</h3>
+                    <p class="tour-description">Start and end your Washington DC journey with comfort and convenience using our premium airport transportation services. We provide reliable, punctual transfers to and from all three major DC-area airports: Ronald Reagan Washington National Airport (DCA), Washington Dulles International Airport (IAD), and Baltimore/Washington International Thurgood Marshall Airport (BWI).</p>
+                    <p class="tour-description">Our professional drivers meet you at baggage claim with a personalized sign, assist with your luggage, and ensure a smooth, comfortable ride to your destination in our modern, well-maintained vehicles. Whether you're traveling alone, with family, or in a group, we have the perfect transportation solution for your needs.</p>
+                    <a href="https://dcnationtours.com/airport-transportation-service/" class="btn">Book Transportation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="contact-info">
+        <div class="contact-bg"></div>
+        <div class="container">
+            <h2>Contact DC Nation Tours & Travel</h2>
+            
+            <div class="contact-details">
+                <div class="contact-item">
+                    <strong>Phone:</strong> (571) 969-9558
+                </div>
+                <div class="contact-item">
+                    <strong>Email:</strong> smile@dcnationtours.com
+                </div>
+                <div class="contact-item">
+                    <strong>Address:</strong> 1400 I ST NW, District of Columbia, DC 20005
+                </div>
+                <div class="contact-item">
+                    <strong>Website:</strong> <a href="https://dcnationtours.com/" style="color: white;">https://dcnationtours.com/</a>
+                </div>
+            </div>
+            
+            <div class="social-links">
+                <a href="https://www.facebook.com/DCNationGuidedTours" class="social-icon">f</a>
+                <a href="https://www.instagram.com/dcnationtours/" class="social-icon">ig</a>
+                <a href="https://www.youtube.com/channel/UCVHltPthKluAjwdqLjVJ5Kg" class="social-icon">yt</a>
+                <a href="https://www.tiktok.com/@dcnationtoursntravel" class="social-icon">tt</a>
+                <a href="https://www.linkedin.com/company/106231692/admin/dashboard/" class="social-icon">in</a>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 DC Nation Tours & Travel. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
